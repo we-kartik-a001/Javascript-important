@@ -13,25 +13,26 @@
 
     <p id="read"></p>
 
-    <p class="names"></p>
+    <p class="object"></p>
+
+    <p class="objectName"></p>
 
     <script>
 
         let text = "";// it is string var
-        // through the loop we are adding the 10 lines as a string in the text string variable
+        // through the loop we are adding the 10 lines as a string in the 'string variable'
         for (let i = 0; i < 10; i++) {
             text += `The value of i is ${i}<br>`;
         }
-
         document.getElementsByClassName("text")[0].innerHTML = text;
 
+        //-----------------------------------------------------------------------------------------------------------------
         // sort method for the arrary 
         let arr = [100, 65, 74]
         arr.sort((a, b) => a - b);
-
         document.getElementById('read').innerHTML = arr;
 
-
+        // object print
         let users = [
             { name: "Kartik", age: 25 },
             { name: "Aman", age: 20 },
@@ -44,8 +45,27 @@
             console.log('user name is ', users[i].name, 'and user age is', users[i].age);
             name += `${users[i].name} ${users[i].age}, `;// in the variable we are adding the string in each iteration
         }
-        document.getElementsByClassName("names")[0].innerHTML = name;
+        document.getElementsByClassName("object")[0].innerHTML = name;
+        //------------------------------------------------------------------------------------------------------------------
 
+        //object sorting 
+        let players = [
+            { name: "Roshan", age: 25 },
+            { name: "Aman", age: 70 },
+            { name: "Tarun", age: 30 },
+            { name: "Rohit", age: 50 },
+        ];
+
+        // players.sort((a, b) => a.name.localeCompare(b.name));// sorting the players on the basis of name
+
+        players.sort((a,b)=>a.age-b.age);// sorting the players on the basis of the age 
+
+        let contestent=""
+
+        for(player of players){
+            contestent += `${player.name}, `;
+        }
+        document.getElementsByClassName("objectName")[0].innerHTML = contestent;
 
     </script>
 </body>
