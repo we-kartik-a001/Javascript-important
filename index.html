@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p class="text"></p>
+
+    <p id="read"></p>
+    
+    <script>
+
+        let text="";// it is string var
+        // through the loop we are adding the 10 lines as a string in the text string variable
+        for(let i=0;i<10;i++){
+            text += `The value of i is ${i}<br>`;
+        }
+
+        document.getElementsByClassName("text")[0].innerHTML = text;
+
+        let arr= [100,65,74]
+        arr.sort((a,b)=>a-b);
+
+        document.getElementById('read').innerHTML = arr;
+
+
+    </script>
+</body>
+</html>
