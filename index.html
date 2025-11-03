@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <p class="text"></p>
 
     <p id="read"></p>
-    
+
+    <p class="names"></p>
+
     <script>
 
-        let text="";// it is string var
+        let text = "";// it is string var
         // through the loop we are adding the 10 lines as a string in the text string variable
-        for(let i=0;i<10;i++){
+        for (let i = 0; i < 10; i++) {
             text += `The value of i is ${i}<br>`;
         }
 
         document.getElementsByClassName("text")[0].innerHTML = text;
 
         // sort method for the arrary 
-        let arr= [100,65,74]
-        arr.sort((a,b)=>a-b);
+        let arr = [100, 65, 74]
+        arr.sort((a, b) => a - b);
 
         document.getElementById('read').innerHTML = arr;
 
 
+        let users = [
+            { name: "Kartik", age: 25 },
+            { name: "Aman", age: 20 },
+            { name: "Riya", age: 30 }
+        ];
+        console.log(users.length);
+
+        let name=""; // the variable of string type
+        for (let i = 0; i < users.length; i++) {
+            console.log('user name is ', users[i].name, 'and user age is', users[i].age);
+            name += `${users[i].name} ${users[i].age}, `;// in the variable we are adding the string in each iteration
+        }
+        document.getElementsByClassName("names")[0].innerHTML = name;
+
+
     </script>
 </body>
+
 </html>
