@@ -40,7 +40,7 @@
         ];
         console.log(users.length);
 
-        let name=""; // the variable of string type
+        let name = ""; // the variable of string type
         for (let i = 0; i < users.length; i++) {
             console.log('user name is ', users[i].name, 'and user age is', users[i].age);
             name += `${users[i].name} ${users[i].age}, `;// in the variable we are adding the string in each iteration
@@ -58,14 +58,28 @@
 
         // players.sort((a, b) => a.name.localeCompare(b.name));// sorting the players on the basis of name
 
-        players.sort((a,b)=>a.age-b.age);// sorting the players on the basis of the age 
+        players.sort((a, b) => a.age - b.age);// sorting the players on the basis of the age 
 
-        let contestent=""
+        let contestent = ""
 
-        for(player of players){
+        for (player of players) {
             contestent += `${player.name}, `;
         }
         document.getElementsByClassName("objectName")[0].innerHTML = contestent;
+
+        //----------------------------------------------------------------------------------------------------------------------
+
+        let fruits = ['apple', 'banana'];
+        fruits.push('cherry');// using the push the new string come at the last place
+        console.log(fruits);
+        fruits.unshift('mango');// using the unshift the mango come at the first place
+        console.log(fruits);
+
+        // check that array 
+        let sport = ['apple', 'banana'];
+        let games = 'apple';
+        console.log(Array.isArray(sport));
+        console.log(Array.isArray(games));
 
     </script>
 </body>
